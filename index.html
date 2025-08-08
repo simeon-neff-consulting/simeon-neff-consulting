@@ -23,6 +23,8 @@
     a{color:var(--green);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+    /* HERO */
     header.hero{
       background: linear-gradient(135deg,var(--green),#204817);
       color:#fff;
@@ -40,18 +42,17 @@
       box-shadow:0 6px 18px rgba(0,0,0,.15)
     }
     .cta:hover{border-color:#cfe6c4;text-decoration:none}
+
+    /* CONTENT */
     main{padding:44px 0}
     section{margin:34px 0;position:relative}
+    /* olive leaf motif above sections */
     section::before{
       content:"";
       display:block;
-      width:60px;
-      height:60px;
-      background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%236f8f3a" viewBox="0 0 64 64"><path d="M32 2C22 14 12 26 12 40s10 22 20 22 20-8 20-22S42 14 32 2z"/></svg>') no-repeat center/contain;
-      position:absolute;
-      top:-40px;
-      left:calc(50% - 30px);
-      opacity:0.15;
+      width:60px;height:60px;
+      background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="%236f8f3a" d="M32 2C22 14 12 26 12 40s10 22 20 22 20-8 20-22S42 14 32 2z"/></svg>') no-repeat center/contain;
+      position:absolute;top:-44px;left:calc(50% - 30px);opacity:.15
     }
     h2{font-size:26px;color:#1f3a18;margin:0 0 12px;font-weight:800}
     p.lede{font-family:Merriweather,Georgia,serif;color:var(--muted);font-size:18px;line-height:1.7;margin:0 0 12px}
@@ -64,34 +65,29 @@
     .card h3{margin:6px 0 8px;font-size:18px}
     .card ul{margin:0;padding-left:18px;color:#2d3a2a}
     .badge{display:inline-block;background:#eaf3e6;color:#1d3e15;border:1px solid #cfe1c7;border-radius:999px;padding:6px 10px;font-weight:600;font-size:13px}
-    .contact{
-      background:#f0f4ec;border:1px solid #d7e2cf;border-radius:12px;padding:18px;position:relative
-    }
+
+    /* contact with oil drop watermark */
+    .contact{background:#f0f4ec;border:1px solid #d7e2cf;border-radius:12px;padding:18px;position:relative}
     .contact::after{
       content:"";
-      display:block;
-      width:50px;
-      height:50px;
-      background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23d4a017" viewBox="0 0 64 64"><path d="M32 2C22 14 12 26 12 40s10 22 20 22 20-8 20-22S42 14 32 2z"/></svg>') no-repeat center/contain;
-      position:absolute;
-      top:10px;
-      right:10px;
-      opacity:0.3;
+      width:50px;height:50px;position:absolute;top:10px;right:10px;opacity:.3;
+      background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="%23d4a017" d="M32 2C22 14 12 26 12 40s10 22 20 22 20-8 20-22S42 14 32 2z"/></svg>') no-repeat center/contain
     }
-    footer{
-      border-top:1px solid #e2e8da;background:#fff;color:#455044;margin-top:24px
-    }
+
+    /* footer */
+    footer{border-top:1px solid #e2e8da;background:#fff;color:#455044;margin-top:24px}
     footer .wrap{padding:16px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <div class="brand">
-        <!-- Olive leaf icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-          <path fill="#cfe1c7" d="M32 2C22 14 12 26 12 40s10 22 20 22 20-8 20-22S42 14 32 2z"/>
-          <path fill="#6f8f3a" d="M16 34c7-6 14-9 22-10-3 8-10 12-22 10z"/>
+      <div class="brand" aria-label="Simeon Neff Consulting">
+        <!-- Olive leaf logo -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#cfe1c7" />
+          <path d="M22 40c6-10 14-18 26-20-2 12-10 20-26 20z" fill="#6f8f3a"/>
+          <path d="M16 34c7-6 14-9 22-10-3 8-10 12-22 10z" fill="#3f6f2a"/>
         </svg>
         <strong>Simeon Neff Consulting</strong>
       </div>
@@ -122,15 +118,15 @@
         <div class="card">
           <h3>Educate the Market</h3>
           <ul>
-            <li>Clear messaging on flavor & health benefits</li>
-            <li>Label & tasting room talking points</li>
+            <li>Clear messaging on flavor &amp; health benefits</li>
+            <li>Label &amp; tasting room talking points</li>
           </ul>
         </div>
         <div class="card">
           <h3>Premium Positioning</h3>
           <ul>
-            <li>Brand strategy & pricing frameworks</li>
-            <li>Wholesale & DTC go-to-market advice</li>
+            <li>Brand strategy &amp; pricing frameworks</li>
+            <li>Wholesale &amp; DTC go-to-market advice</li>
           </ul>
         </div>
       </div>
@@ -141,16 +137,47 @@
       <div class="grid">
         <div class="card">
           <span class="badge">Organizations</span>
-          <h3>Operational & Team Consulting</h3>
+          <h3>Operational &amp; Team Consulting</h3>
           <ul>
-            <li>Workflow analysis & SOPs</li>
+            <li>Workflow analysis &amp; SOPs</li>
             <li>Leadership coaching</li>
             <li>Employee engagement programs</li>
           </ul>
         </div>
         <div class="card">
           <span class="badge">Brand</span>
-          <h3>Brand & Marketing Strategy</h3>
+          <h3>Brand &amp; Marketing Strategy</h3>
           <ul>
             <li>Positioning high-polyphenol oils</li>
             <li>Messaging, tastings, and education</li>
+            <li>Website &amp; channel recommendations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="badge">Operations</span>
+          <h3>Production &amp; Quality Support</h3>
+          <ul>
+            <li>Throughput without losing quality</li>
+            <li>QA checkpoints and feedback loops</li>
+            <li>Supplier &amp; packaging guidance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p class="lede">Ready to boost performance and elevate your brand?</p>
+      <p><strong>Email:</strong> <a href="mailto:sneff3@my.gcu.edu">sneff3@my.gcu.edu</a></p>
+      <p><strong>Location:</strong> Central Coast, California</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>&copy; 2025 Simeon Neff Consulting</div>
+      <div>NAICS 541611 — Administrative &amp; General Management Consulting</div>
+    </div>
+  </footer>
+</body>
+</html>
